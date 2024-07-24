@@ -130,8 +130,3 @@ def get_prices():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
     app.run(host='0.0.0.0', port=port)
-    
-# commands to run: 
-# docker build -t stock-price-getter .
-# docker tag stock-price-getter haseeeba/stock_price_getter:latest
-# docker push haseeeba/stock_price_getter:latest
