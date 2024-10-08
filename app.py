@@ -74,6 +74,11 @@ update_thread.start()
 
 
 print(API_KEYS)
+
+@app.route('/', methods=['GET'])
+def healthCheck():
+    return jsonify({'success': 'server is running'})
+    
 @app.route('/prices', methods=['POST'])
 def get_prices():
     api_key = request.headers.get('X-API-Key')
